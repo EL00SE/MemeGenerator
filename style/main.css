@@ -1,4 +1,15 @@
-
-
 /* BASIC */
-@import 'baisc/helpers.css'
+
+@import 'basic/helpers.css';
+@import 'basic/base.css';
+
+/* COMPONENTS */
+
+@import 'components/header.css';
+@import 'components/gallery.css';
+@import 'components/modal.css';
+
+/* SETUP */
+
+@import 'setup/vars.css';
+@import 'setup/typography.css';

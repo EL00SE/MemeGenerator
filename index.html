@@ -1,27 +1,69 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="style/main.css"/>
-    <title>Meme Generator</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Meme generator</title>
 </head>
 
-<body>
+<body onload="init()">
     <header class="main-header flex space-between align-center">
-        <div class="logo">
-            <img src="images/logo/logo.png"/>
-        </div>
-            <nav class="nav-container">
-                <ul class="clean-list">
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
+        <div class="logo-container">memegen</div>
+        <nav class="main-nav flex">
+            <ul class="flex clean-list">
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
     </header>
-
+    <div class="gallery-container">
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/1.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/2.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/3.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/4.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/5.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/6.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/7.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/8.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/9.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/10.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/11.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/12.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/13.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/14.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/15.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/16.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/17.jpg"></div>
+        <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/18.jpg"></div>
+    </div>
+    <div class="meme-modal hidden">
+        <div class="modal-content">
+            <div class="canvas-container">
+                <div class="canvas-text1 canvas-text"></div>
+                <div class="canvas-text2 canvas-text"></div>
+                <div class="canvas-text3 canvas-text"></div>
+                <div class="canvas-text4 canvas-text"></div>
+                <div class="canvas-text5 canvas-text"></div>
+                <canvas height="400px" width="400px"></canvas>
+            </div>
+            <input type="text" class="meme-text" onchange="memeTextOnchange()" placeholder="insert text">
+            <button class="font-up-btn button">up</button>
+            <button class="font-down-btn button">down</button>
+            <select class="font-select button">
+            <option value="impact">impact</option>
+            <option value="bebus">bebus</option>
+            <option value="arial">arial</option>
+            <option value="tahooma">tahooma</option>
+        </select>
+            <button class="upload-btn button">upload</button>
+            <button class="share-btn button">share</button>
+            <a href="#" class="download-btn button" onclick="onDownload(this)" download="">Download</a>
+        </div>
+    </div>
+    <script src="script/main.js "></script>
 </body>
 
 </html>

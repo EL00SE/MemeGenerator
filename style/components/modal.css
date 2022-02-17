@@ -1,0 +1,139 @@
+.meme-modal {
+    /* grid-template-areas: "canvas  meme-text" "canvas font-up font-down bold" "canvas font-select color-btn"; */
+    position: fixed;
+    z-index: 1;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    padding-inline-start: 100px;
+    padding-inline-end: 100px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.meme-modal .modal-content {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: 3fr repeat(10, 1fr);
+}
+
+.meme-modal .canvas-container {
+    grid-row: 1 / span 12;
+    display: flex;
+    justify-content: center;
+    /* width: 100px;
+    height: 100px; */
+}
+
+.meme-modal .meme-text {
+    grid-row: 1;
+    grid-column: 4 /span 7;
+    background-color: #fff;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.meme-modal .font-up-btn {
+    grid-row: 2;
+    grid-column: 4;
+    /* width: fit-content; */
+}
+
+.meme-modal .font-down-btn {
+    grid-row: 2;
+    grid-column: 5;
+    /* width: fit-content; */
+}
+
+.meme-modal .font-select {
+    grid-row: 3;
+    grid-column: 4;
+    /* width: fit-content; */
+}
+
+.meme-modal .download-btn {
+    grid-row: 4;
+    grid-column: 4;
+}
+
+.meme-modal .upload-btn {
+    grid-row: 4;
+    grid-column: 6;
+}
+
+.meme-modal .share-btn {
+    grid-row: 4;
+    grid-column: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+.button {
+    background-color: #fff;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 100px;
+}
+
+.button:hover {
+    background-color: #f7fafa;
+}
+
+.button:focus {
+    border-color: #008296;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    outline: 0;
+}
+
+.meme-modal .canvas-container .canvas-text {
+    position: fixed;
+    z-index: 2;
+    color: white;
+}
+
+.meme-modal .canvas-container .canvas-text1 {
+    width: fit-content;
+    height: fit-content;
+    top: 15%;
+    font-size: 1.25rem;
+}
+
+
+/* .meme-modal .canvas-container .canvas-text2 {}
+
+.meme-modal .canvas-container .canvas-text3 {}
+
+.meme-modal .canvas-container .canvas-text4 {}
+
+.meme-modal .canvas-container .canvas-text5 {} */
