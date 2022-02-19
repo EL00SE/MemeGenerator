@@ -11,7 +11,8 @@
     gap: 10px 10px;
 }
 
-.grid-item {}
+
+/* .grid-item {} */
 
 .grid-item img {
     padding: 0px;
@@ -20,4 +21,9 @@
     height: 100%;
     object-fit: fill;
     cursor: pointer;
+}
+
+.grid-item img:hover {
+    border: var(--header-bgc) solid 2px;
+    transition: border 0.1s;
 }

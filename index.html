@@ -42,27 +42,35 @@
     <div class="meme-modal hidden">
         <div class="modal-content">
             <div class="canvas-container">
-                <div class="canvas-text1 canvas-text"></div>
-                <div class="canvas-text2 canvas-text"></div>
-                <div class="canvas-text3 canvas-text"></div>
-                <div class="canvas-text4 canvas-text"></div>
-                <div class="canvas-text5 canvas-text"></div>
                 <canvas height="400px" width="400px"></canvas>
+                <div class="highlighter"> </div>
             </div>
-            <input type="text" class="meme-text" onchange="memeTextOnchange()" placeholder="insert text">
-            <button class="font-up-btn button">up</button>
-            <button class="font-down-btn button">down</button>
-            <select class="font-select button">
+            <input type="text" class="meme-text" onchange="onMemeTextChange(this)" placeholder="insert text">
+            <button class="switch-line-up button" onclick="onSwitchUp()">up</button>
+            <button class="switch-line-down button" onclick="onSwitchDown()">down</button>
+            <button class="add-line button" onclick="onAddLine()">+</button>
+            <button class="remove-line button" onclick="onRemoveLine()">-</button>
+            <button class="restore button" onclick="onRestore()">restore</button>
+            <select class="font-select button" oninput="onFontSelect(this)">
             <option value="impact">impact</option>
             <option value="bebus">bebus</option>
             <option value="arial">arial</option>
-            <option value="tahooma">tahooma</option>
+            <option value="sans serif">sans serif</option>
         </select>
-            <button class="upload-btn button">upload</button>
-            <button class="share-btn button">share</button>
+            <button class="font-size-up button" onclick="onFontSizeUp()">A+</button>
+            <button class="font-size-down button" onclick="onFontSizeDown()">A-</button>
+            <button class="ltr button" onclick="onLtrText()">ltr</button>
+            <button class="center button" onclick="onCenterText()">center</button>
+            <button class="rtl button" onclick="onRtlText()">rtl</button>
+            <input type="color" class="button font-color" id="font-color" oninput="onFontColor()">
+            <input type="color" class="button stroke-color" id="stroke-color" oninput="onStrokeColor()">
+            <button class="upload-btn button" onclick="onUpload()">upload</button>
+            <button class="share-btn button" onclick="onShare()">share</button>
             <a href="#" class="download-btn button" onclick="onDownload(this)" download="">Download</a>
         </div>
     </div>
+    <script src="script/services/memeEditService.js"></script>
+    <script src="script/services/memeEditButtonService.js"></script>
     <script src="script/main.js "></script>
 </body>
 
