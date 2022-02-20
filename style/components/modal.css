@@ -126,6 +126,7 @@
 .meme-modal .download-btn {
     grid-row: 5;
     grid-column: 8;
+    text-align: center;
 }
 
 .meme-modal .upload-btn {

@@ -2,7 +2,29 @@
 
 var gCurrLineNumber = 0;
 var gLineAmmount = 2;
-var gLines;
+var gLines = [{
+        color: 'white',
+        stroke: 'black',
+        size: 30,
+        font: 'Impact',
+        txt: 'Enter text',
+        pos: {
+            x: 'center',
+            y: 30,
+        }
+    },
+    {
+        color: 'white',
+        stroke: 'black',
+        size: 30,
+        font: 'Impact',
+        txt: 'Enter Text',
+        pos: {
+            x: 'center',
+            y: getCanvas().height - 30
+        }
+    }
+];
 
 function restoreToDefault() {
     gLines = [{
@@ -28,6 +50,13 @@ function restoreToDefault() {
             }
         }
     ];
+    gCurrLineNumber = 0;
+    gLineAmmount = 2;
+}
+
+
+function setPosY(idx, diff) {
+    gLines[idx].pos.y += diff;
 }
 
 function setColor(idx, color) {
@@ -46,19 +75,11 @@ function setTxt(idx, txt) {
     gLines[idx].txt = txt;
 }
 
-function selectLineUp() {
-    if (gLineAmmount === 0) return false;
-    if (gCurrLineNumber === 0) {
-        gCurrLineNumber = gLineAmmount - 1;
-    } else gCurrLineNumber--;
-    return true;
-}
-
-function selectLineDown() {
+function cycleLine() {
     if (gLineAmmount === 0) return false;
     if (gCurrLineNumber === gLineAmmount - 1) {
         gCurrLineNumber = 0;
-    } else gCurrLineNumber++;
+    } else { gCurrLineNumber++; }
     return true;
 }
 
@@ -70,14 +91,13 @@ function addLine(color = 'white', stroke = 'black', size = 30, font = 'Impact', 
     var pos = { x: 'center', y: posY }
     gLines.splice(gLineAmmount - 1, 0, { color, stroke, size, font, txt, pos });
     gLineAmmount++;
-    // gLines.sort((a, b) => a.pos - b.pos);
+    gLines.sort((a, b) => a.pos.y - b.pos.y);
 }
 
 function removeLine(idx) {
     if (gLineAmmount === 0) return;
     gLines.splice(idx, 1);
     gLineAmmount--;
-    console.log(gLineAmmount);
 }
 
 function fontSizeUp(idx) {
@@ -114,13 +134,6 @@ function strokeColor(elStrokeColorInput) {
     setStroke(gCurrLineNumber, elStrokeColorInput.value);
 }
 
-function shareMeme() {
-
-}
-
-function uploadMeme() {
-
-}
 
 function getLines() {
     return gLines;
@@ -140,6 +153,10 @@ function setCurrLineNumber(number) {
 
 function getCurrLineNumber() {
     return gCurrLineNumber;
+}
+
+function getCanvasContainer() {
+    return document.querySelector('.canvas-container');
 }
 
 function getCanvas() {
