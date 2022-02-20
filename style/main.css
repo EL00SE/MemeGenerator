@@ -1,13 +1,15 @@
-/* BASIC */
-
-@import 'basic/helpers.css';
-@import 'basic/base.css';
-
 /* COMPONENTS */
 
 @import 'components/header.css';
 @import 'components/gallery.css';
 @import 'components/modal.css';
+@import 'components/screen.css';
+
+/* BASIC */
+
+@import 'basic/helpers.css';
+@import 'basic/base.css';
+@import 'basic/mq.css';
 
 /* SETUP */
 

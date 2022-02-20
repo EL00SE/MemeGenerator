@@ -1,0 +1,344 @@
+    @media (max-width: 939px) {
+        .main-nav {
+            position: fixed;
+            height: 100vh;
+            min-width: 220px;
+            top: 0;
+            right: 0;
+            background-color: rgb(242, 108, 108, 50%);
+            transform: translateX(100%);
+            transition: transform .6s, box-shadow .6s;
+        }
+        body.menu-open .main-nav {
+            transform: translateX(0);
+            box-shadow: -10px 0px 13px rgb(0 0 0 / 16%);
+        }
+        .main-header .main-nav ul {
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            border-left: solid 1px var(--header-font);
+            width: 100%;
+        }
+        .main-header .main-nav a {
+            display: block;
+            padding: 1.125rem 1.6rem;
+            transition: background-color .3s;
+        }
+        .btn-menu {
+            height: 40px;
+            width: 50px;
+            margin: auto 22.5px;
+        }
+        .main-nav ul>*:first-child {
+            margin-top: 65px;
+            border-top: solid 1px var(--header-font);
+        }
+        .main-header .main-nav li {
+            border-bottom: solid 1px var(--header-font);
+            width: 100%;
+        }
+        .logo-container {
+            padding-inline-start: 22.5px;
+        }
+        .meme-modal {
+            padding: 145px;
+        }
+        .meme-modal .canvas-container {
+            grid-column: 4/span 5;
+            grid-row: 1/span 5;
+        }
+        .meme-modal .meme-text {
+            grid-row: 6;
+            grid-column: 4/span 5;
+        }
+        .meme-modal .move-line-up {
+            grid-row: 7;
+            grid-column: 4;
+        }
+        .meme-modal .move-line-down {
+            grid-row: 7;
+            grid-column: 5;
+        }
+        .meme-modal .cycle-line {
+            grid-row: 7;
+            grid-column: 6;
+        }
+        .meme-modal .add-line {
+            grid-row: 7;
+            grid-column: 7;
+        }
+        .meme-modal .remove-line {
+            grid-row: 7;
+            grid-column: 8;
+        }
+        .meme-modal .font-size-up {
+            grid-row: 8;
+            grid-column: 4;
+        }
+        .meme-modal .font-size-down {
+            grid-row: 8;
+            grid-column: 5;
+        }
+        .meme-modal .ltr {
+            grid-row: 8;
+            grid-column: 6;
+        }
+        .meme-modal .center {
+            grid-row: 8;
+            grid-column: 7;
+        }
+        .meme-modal .rtl {
+            grid-row: 8;
+            grid-column: 8;
+        }
+        .meme-modal .font-select {
+            grid-row: 9;
+            grid-column: 4 /span 2;
+        }
+        .meme-modal .font-color {
+            grid-row: 9;
+            grid-column: 6;
+        }
+        .meme-modal .stroke-color {
+            grid-row: 9;
+            grid-column: 7;
+        }
+        .meme-modal .restore {
+            grid-row: 9;
+            grid-column: 8;
+        }
+        .meme-modal .download-btn {
+            grid-row: 10;
+            grid-column: 4;
+        }
+        .meme-modal .upload-btn {
+            grid-row: 10;
+            grid-column: 5;
+        }
+        .meme-modal .share-btn {
+            grid-row: 10;
+            grid-column: 6;
+        }
+        .meme-modal .close-modal-btn {
+            grid-row: 10;
+            grid-column: 7/span 2;
+        }
+    }
+    
+    @media (max-width: 660px) {
+        .gallery-container {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .meme-modal {
+            padding: 145px 0px;
+        }
+    }
+    
+    @media (max-width:440px) {
+        .meme-modal {
+            padding-top: 65px;
+        }
+        .meme-modal .modal-content {
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(14, 1fr);
+        }
+        .meme-modal .canvas-container {
+            height: 200px;
+            width: 200px;
+            grid-column: 4/span 2;
+        }
+        .meme-modal .meme-text {
+            grid-row: 6;
+            grid-column: 4/span 2;
+        }
+        .meme-modal .move-line-up {
+            grid-row: 7;
+            grid-column: 4;
+        }
+        .meme-modal .move-line-down {
+            grid-row: 7;
+            grid-column: 5;
+        }
+        .meme-modal .add-line {
+            grid-row: 8;
+            grid-column: 4;
+        }
+        .meme-modal .remove-line {
+            grid-row: 8;
+            grid-column: 5;
+        }
+        .meme-modal .cycle-line {
+            grid-row: 9;
+            grid-column: 4;
+        }
+        .meme-modal .restore {
+            grid-row: 9;
+            grid-column: 5;
+        }
+        .meme-modal .font-size-up {
+            grid-row: 10;
+            grid-column: 4;
+        }
+        .meme-modal .font-size-down {
+            grid-row: 10;
+            grid-column: 5;
+        }
+        .meme-modal .ltr {
+            grid-row: 11;
+            grid-column: 4;
+        }
+        .meme-modal .rtl {
+            grid-row: 11;
+            grid-column: 5;
+        }
+        .meme-modal .center {
+            grid-row: 12;
+            grid-column: 4;
+        }
+        .meme-modal .font-select {
+            grid-row: 12;
+            grid-column: 5;
+        }
+        .meme-modal .font-color {
+            grid-row: 13;
+            grid-column: 4;
+        }
+        .meme-modal .stroke-color {
+            grid-row: 13;
+            grid-column: 5;
+        }
+        .meme-modal .upload-btn {
+            grid-row: 14;
+            grid-column: 4;
+        }
+        .meme-modal .share-btn {
+            grid-row: 14;
+            grid-column: 5;
+        }
+        .meme-modal .download-btn {
+            grid-row: 15;
+            grid-column: 4;
+        }
+        .meme-modal .close-modal-btn {
+            grid-row: 15;
+            grid-column: 5;
+        }
+    }
+    
+    @media(max-width:220px) {
+        .main-nav {
+            width: 100vw;
+            min-width: 0px;
+        }
+        .meme-modal {
+            padding-top: 40px;
+        }
+    }
+    
+    @media (min-width: 660px) {
+        .gallery-container {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            width: 600px;
+        }
+        .meme-modal .canvas-container {
+            width: 400px;
+            height: 400px;
+        }
+    }
+    
+    @media (min-width: 940px) {
+        .gallery-container {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            width: 865px;
+        }
+        .logo-container {
+            padding-inline-start: 50px;
+        }
+        .main-nav {
+            padding-inline-end: 50px;
+        }
+        .btn-menu {
+            display: none;
+        }
+        .main-nav .clean-list li {
+            width: 130px;
+            height: 100%;
+            transition: background-color 0.3s;
+        }
+        .main-nav .clean-list li:last-child {
+            border-inline-end: 1px solid white;
+        }
+        .main-nav .clean-list li a {
+            display: flex;
+            transition: color 0.3s;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            border-inline-start: 1px solid white;
+        }
+        .meme-modal {
+            padding-top: 145px;
+        }
+        .meme-modal .modal-content {
+            grid-template-rows: repeat(10, 1fr);
+        }
+        .meme-modal .canvas-container {
+            grid-template-rows: repeat(20, 1fr);
+            width: 500px;
+            height: 500px;
+        }
+    }
+    
+    @media (min-width: 1120px) {
+        .gallery-container {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            width: 1075px;
+        }
+        .meme-modal {
+            align-items: center;
+            padding-inline-start: 25px;
+            padding-inline-end: 25px;
+        }
+    }
+    
+    @media (min-width: 1320px) {
+        .meme-modal {
+            padding-inline-start: 125px;
+            padding-inline-end: 125px;
+        }
+        .meme-modal .canvas-container {
+            width: 600px;
+            height: 600px;
+        }
+    }
+    
+    @media (min-width: 1500px) {
+        .gallery-container {
+            width: 1455px;
+            margin: 0 auto;
+        }
+        .logo-container {
+            padding-inline-start: 100px;
+        }
+        .main-nav {
+            padding-inline-end: 100px;
+        }
+        .meme-modal {
+            padding-inline-start: 90px;
+            padding-inline-end: 90px;
+        }
+    }
+    
+    @media (min-width:1650px) {
+        .meme-modal {
+            padding-inline-start: 215px;
+            padding-inline-end: 215px;
+        }
+        .meme-modal .canvas-container {
+            width: 700px;
+            height: 700px;
+        }
+    }

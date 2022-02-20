@@ -1,14 +1,8 @@
 .gallery-container {
     display: grid;
-    /* align-content: center; */
     margin: 0 auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    padding-inline-end: 50px;
-    padding-inline-start: 50px;
-    height: 80vh;
-    width: 80vw;
     gap: 10px 10px;
+    padding: 0px 10px;
 }
 
 

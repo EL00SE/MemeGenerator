@@ -10,6 +10,7 @@
 </head>
 
 <body onload="init()">
+    <div class="main-screen" onclick="toggleMenu()"></div>
     <header class="main-header flex space-between align-center">
         <div class="logo-container">memegen</div>
         <nav class="main-nav flex">
@@ -18,6 +19,7 @@
                 <li><a href="#">About</a></li>
             </ul>
         </nav>
+        <button class="btn-menu button" onclick="toggleMenu()">☰</button>
     </header>
     <div class="gallery-container">
         <div class="grid-item"><img onclick="openEditor(this)" src="images/memes/1.jpg"></div>
@@ -46,8 +48,9 @@
                 <div class="highlighter"> </div>
             </div>
             <input type="text" class="meme-text" onchange="onMemeTextChange(this)" placeholder="insert text">
-            <button class="switch-line-up button" onclick="onSwitchUp()">up</button>
-            <button class="switch-line-down button" onclick="onSwitchDown()">down</button>
+            <button class="move-line-up button" onclick="onMoveLineUp()">up</button>
+            <button class="move-line-down button" onclick="onMoveLineDown()">down</button>
+            <button class="cycle-line button" onclick="onCycle()">cycle</button>
             <button class="add-line button" onclick="onAddLine()">+</button>
             <button class="remove-line button" onclick="onRemoveLine()">-</button>
             <button class="restore button" onclick="onRestore()">restore</button>
@@ -62,13 +65,16 @@
             <button class="ltr button" onclick="onLtrText()">ltr</button>
             <button class="center button" onclick="onCenterText()">center</button>
             <button class="rtl button" onclick="onRtlText()">rtl</button>
-            <input type="color" class="button font-color" id="font-color" oninput="onFontColor()">
-            <input type="color" class="button stroke-color" id="stroke-color" oninput="onStrokeColor()">
-            <button class="upload-btn button" onclick="onUpload()">upload</button>
+            <input type="color" class="button font-color" id="font-color" oninput="onFontColor(this)">
+            <input type="color" class="button stroke-color" id="stroke-color" oninput="onStrokeColor(this)">
+            <button class="upload-btn button" onclick="onSave()">save</button>
             <button class="share-btn button" onclick="onShare()">share</button>
             <a href="#" class="download-btn button" onclick="onDownload(this)" download="">Download</a>
+            <button class="close-modal-btn button" onclick="onClose()">Close</button>
         </div>
     </div>
+
+    <script src="script/services/storageService.js"></script>
     <script src="script/services/memeEditService.js"></script>
     <script src="script/services/memeEditButtonService.js"></script>
     <script src="script/main.js "></script>

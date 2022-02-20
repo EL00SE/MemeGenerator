@@ -1,8 +1,7 @@
 .meme-modal {
-    /* grid-template-areas: "canvas  meme-text" "canvas font-up font-down bold" "canvas font-select color-btn"; */
     position: fixed;
     z-index: 1;
-    padding-top: 80px;
+    padding-top: 65px;
     left: 0;
     top: 0;
     padding-inline-start: 100px;
@@ -18,27 +17,25 @@
     display: grid;
     justify-content: space-between;
     align-items: center;
-    grid-template-rows: repeat(12, 1fr);
-    grid-template-columns: 3fr repeat(10, 1fr);
+    /* grid-template-rows: repeat(12, 1fr); */
+    grid-template-columns: repeat(12, 1fr);
     gap: 5px 5px;
 }
 
 .meme-modal .canvas-container {
     grid-row: 1 / span 12;
-    grid-column: 1 /span 4;
+    grid-column: 1 /span 7;
     display: flex;
     justify-content: center;
     width: min-content;
     height: min-content;
     border: black solid 5px;
     position: relative;
-    /* width: 100px;
-    height: 100px; */
 }
 
 .meme-modal .meme-text {
     grid-row: 1;
-    grid-column: 4 /span 5;
+    grid-column: 8 /span 5;
     background-color: #fff;
     border: 1px solid #d5d9d9;
     border-radius: 8px;
@@ -56,84 +53,100 @@
     vertical-align: middle;
 }
 
-.meme-modal .switch-line-up {
+.meme-modal .move-line-up {
     grid-row: 2;
-    grid-column: 4;
+    grid-column: 8;
 }
 
-.meme-modal .switch-line-down {
+.meme-modal .move-line-down {
     grid-row: 2;
-    grid-column: 5;
+    grid-column: 9;
+}
+
+.meme-modal .cycle-line {
+    grid-row: 2;
+    grid-column: 10;
 }
 
 .meme-modal .add-line {
     grid-row: 2;
-    grid-column: 6;
+    grid-column: 11;
 }
 
 .meme-modal .remove-line {
     grid-row: 2;
-    grid-column: 7;
+    grid-column: 12;
 }
 
 .meme-modal .restore {
-    grid-row: 2;
-    grid-column: 8;
+    grid-row: 4;
+    grid-column: 12;
 }
 
 .meme-modal .font-select {
     grid-row: 4;
-    grid-column: 4 /span 2;
+    grid-column: 8 /span 2;
 }
 
 .meme-modal .font-size-up {
     grid-row: 3;
-    grid-column: 4;
+    grid-column: 8;
 }
 
 .meme-modal .font-size-down {
     grid-row: 3;
-    grid-column: 5;
+    grid-column: 9;
 }
 
 .meme-modal .ltr {
     grid-row: 3;
-    grid-column: 6;
+    grid-column: 10;
 }
 
 .meme-modal .center {
     grid-row: 3;
-    grid-column: 7;
+    grid-column: 11;
 }
 
 .meme-modal .rtl {
     grid-row: 3;
-    grid-column: 8;
+    grid-column: 12;
 }
 
 .meme-modal .font-color {
     grid-row: 4;
-    grid-column: 7;
+    grid-column: 10;
 }
 
 .meme-modal .stroke-color {
     grid-row: 4;
-    grid-column: 8;
+    grid-column: 11;
 }
 
 .meme-modal .download-btn {
     grid-row: 5;
-    grid-column: 4;
+    grid-column: 8;
 }
 
 .meme-modal .upload-btn {
     grid-row: 5;
-    grid-column: 6;
+    grid-column: 9;
 }
 
 .meme-modal .share-btn {
     grid-row: 5;
-    grid-column: 8;
+    grid-column: 10;
+}
+
+.meme-modal .close-modal-btn {
+    grid-row: 5;
+    grid-column: 12;
+    background-color: var(--header-bgc);
+    border-color: var(--header-bgc);
+}
+
+.meme-modal .close-modal-btn:hover {
+    background-color: rgb(160, 13, 13);
 }
 
 .button {
